@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+
+body{
+background-color:rgb(74,139,167);
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+width:900px;
+margin:auto;
+background-color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+}
+
+.logo{
+color:rgb(58,157,157);
+}
+
+.logo span{
+color:blue;
+}
+
+nav a{
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+color:black;
+font-size:18px;
+}
+
+.home{
+padding:40px;
+}
+
+.home p{
+font-size:18px;
+text-align:justify;
+}
+.about{
+background-color:rgb(72,197,197);
+padding:40px;
+color:white;
+display:flex;
+align-items:center;
+gap:30px;
+}
+
+.services{
+padding:40px;
+text-align: center;
+}
+
+.services img{
+width:200px;
+height:200px;
+margin:20px;
+}
+
+.contact{
+background-color:royalblue;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+.contact input,
+.contact textarea{
+margin:10px;
+padding:8px;
+width:250px;
+}
+button{
+padding:10px 20px;
+background-color:rgb(58,157,157);
+color:white;border:none;
+cursor:pointer;
+}
+
+
+footer{
+text-align:center;
+padding:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<h1 class="logo"><u><span>My</span> Portfolio</u></h1>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="home" id="home">
+
+<h2>I'm Sadham</h2>
+<h1>Web Developer And UI Developer</h1>
+
+<p>
+I am a passionate web developer and UI designer with experience in creating
+responsive and user-friendly websites.
+</p>
+
+<a href="https://www.facebook.com/" target="_blank"><img src="fac.png" width="30" style="margin-right: 10px;"></a>
+<a href="https://www.instagram.com/" target="_blank"><img src="insta.png" width="30"></a>
+
+</section>
+
+<section class="about" id="about">
+
+<img src="img01.jpg" width="200" height="200">
+
+<div>
+
+<h1>About Me</h1>
+
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Consectetur odit soluta ipsa. Quibusdam eum expedita sed,
+vitae maxime libero et modi dolorem praesentium reiciendis
+id molestiae voluptatem nobis ducimus nulla.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="services" id="services">
+
+<h1>Services</h1>
+
+<img src="img02.jpg">
+<img src="img03.jpg">
+
+<p>
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Consectetur odit soluta ipsa. Quibusdam eum expedita sed,
+vitae maxime libero et modi dolorem praesentium reiciendis.
+</p>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h1>Contact</h1>
+
+<label>Name</label><br>
+<input type="text" placeholder="Your Name"><br>
+
+<label>Email</label><br>
+<input type="email" placeholder="Your Email"><br>
+
+<label>Message</label><br>
+<textarea rows="4" placeholder="Your Message"></textarea><br>
+
+<button onclick="alert('Form submitted successfully!')">
+Submit
+</button>
+
+</section>
+<div style="background-color:rgb(81, 88, 88);">
+<footer>
+    <a href="#top"> back to top</a>
+<p style="color: aliceblue;">© 2026 My Portfolio. All rights reserved.</p>
+</footer>
+</div>
+</div>
+
+</body>
+</html>
