@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Methods UI</title>
+<link rel="stylesheet" href="styles1.css">
+
+<style>
+    .internal {
+        background: linear-gradient(135deg, #74ebd5, #9face6);
+        color: #333;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+    }
+
+    .internal:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+</head>
+<body>
+
+<h1 class="title">CSS Styling Methods </h1>
+
+<div class="container">
+    <div style="background: linear-gradient(135deg, #ff9a9e, #fad0c4); padding:20px; border-radius:15px; box-shadow:0 4px 10px rgba(0,0,0,0.2); transition:0.3s;">
+        <h2>Inline CSS</h2>
+        <p>This section uses inline styling.</p>
+    </div>
+    <div class="internal">
+        <h2>Internal CSS</h2>
+        <p>This section uses internal styling.</p>
+    </div>
+
+    <div class="external">
+        <h2>External CSS</h2>
+        <p>This section uses external styling.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
