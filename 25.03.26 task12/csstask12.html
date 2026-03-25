@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS task12</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        color: white;
+        margin-bottom: 30px;
+        letter-spacing: 2px;
+    }
+
+    .container {
+        display: grid;
+        gap: 25px;
+        width: 70%;
+    }
+
+    .card {
+        backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 20px;
+        padding: 26px;
+        color: white;
+        text-align: center;
+        box-shadow: 15px 8px 25px rgba(0,0,0,0.3);
+        border: 1px solid rgba(255,255,255,0.3);
+        font-family: 'Courier New', monospace;
+        font-size: 18px;
+    }
+
+
+    .colors p {
+        color: yellow;
+        border: 2px solid cyan;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .background {
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        color: rgb(240, 236, 236);
+        background-image: url(awesome-pic-natureza-600nw-2408133899.webp);
+    }
+    #font1{
+        font-weight: bold;
+    }
+      #font2{
+        font-style: italic;
+    }
+     #font3{
+       text-decoration: underline;
+    }
+</style>
+</head>
+
+<body>
+
+<h1 style="color:liner ;">CSS Task12</h1>
+
+<div class="container">
+
+    <div class="card colors">
+        <h2>Colors</h2>
+        <p>Colored text with border</p>
+    </div>
+
+    <div class="card background">
+        <h2>Background</h2>
+        <p>background color applied</p>
+    </div>
+
+    <div class="card fonts">
+        <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: x-large;">Fonts</h2>
+        <p>Different font and size</p>
+    </div>
+
+    <div class="card textstyles">
+        <h2>Text Styles</h2>
+        <p>Normal</p>
+        <p id="font1">Bold</p>
+        <p id="font2">Italic</p>
+        <p id="font3">Underline</p>
+    </div>
+
+</div>
+</body>
+</html>
