@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boat Crew Adventure</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        text-align: center;
+        color: white;
+    }
+
+    h1 {
+        margin-top: 20px;
+    }
+
+    .boat {
+        font-size: 50px;
+        position: relative;
+        animation: moveBoat 5s infinite alternate;
+    }
+
+    @keyframes moveBoat {
+        from { left: -50px; }
+        to { left: 50px; }
+    }
+
+    #crewDiv {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin: 30px;
+    }
+
+    .card {
+        background: white;
+        color: black;
+        padding: 15px;
+        border-radius: 15px;
+        width: 120px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+    .card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+
+    button {
+        padding: 12px 20px;
+        margin: 10px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        background: #ff7eb3;
+        color: white;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #ff4f81;
+    }
+
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Boat Crew Adventure</h1>
+
+<div class="boat">🚤</div>
+
+<div id="crewDiv">
+
+    <div class="card">
+        <img src="https://i.pravatar.cc/80?img=1">
+        <p>Jack</p>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pravatar.cc/80?img=2">
+        <p>Alice</p>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pravatar.cc/80?img=3">
+        <p>Tom</p>
+    </div>
+
+    <div class="card">
+        <img src="https://i.pravatar.cc/80?img=4">
+        <p>Emma</p>
+    </div>
+
+</div>
+<h2>Ask for Route</h2>
+
+<button onclick="jackRoute()">Ask Jack</button>
+<button onclick="aliceRoute()">Ask Alice</button>
+
+<p id="result"></p>
+
+<script>
+function jackRoute() {
+    document.getElementById("result").innerText =
+    "Jack: Go straight and turn left near the lighthouse!";
+    console.log("Jack: Go straight and turn left near the lighthouse!");
+}
+
+function aliceRoute() {
+    document.getElementById("result").innerText =
+    "Alice: Take the right path and follow the stars!";
+    console.log("Alice: Take the right path and follow the stars!");
+}
+</script>
+
+</body>
+</html>
