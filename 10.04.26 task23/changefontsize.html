@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Font Size</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #84fab0, #8fd3f4);
+            padding-top: 100px;
+        }
+
+        #p1 {
+            font-size: 22px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            transition: 0.4s;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: #673ab7;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #5e35b1;
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+<body>
+
+    <p id="p1">Python Full Stack Developer</p>
+    <br>
+    <button onclick="changefontsize()">Click Me</button>
+
+    <script>
+        let isChanged = false;
+
+        function changefontsize(){
+            let element = document.getElementById("p1");
+
+            if(!isChanged){
+                element.style.color = "blue";
+                element.style.fontSize = "30px";
+                element.style.fontWeight = "bold";
+                isChanged = true;
+            } else {
+                element.style.color = "black";
+                element.style.fontSize = "22px";
+                element.style.fontWeight = "normal";
+                isChanged = false;
+            }
+        }
+    </script>
+
+</body>
+</html>
