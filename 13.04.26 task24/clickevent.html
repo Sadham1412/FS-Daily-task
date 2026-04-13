@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Event</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        text-align: center;
+        margin-top: 100px;
+      }
+
+      h1 {
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>If you click this button event will happen</h1>
+    
+    <button onclick="clickbutton()">Click Me</button>
+
+    <script>
+      function clickbutton() {
+        alert("Button is working!");
+      }
+    </script>
+  </body>
+</html>

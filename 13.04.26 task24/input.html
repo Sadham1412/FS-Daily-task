@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Input</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 300px;
+        }
+
+        h1 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #007bff;
+        }
+
+        p {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Please type what you think</h1>
+
+        <input type="text" id="b1" placeholder="Type here..." oninput="showtext()">
+
+        <p id="output">Your text will appear here...</p>
+    </div>
+
+    <script>
+        function showtext(){
+            let val = document.getElementById("b1").value;
+            document.getElementById("output").textContent = val;
+        }
+    </script>
+
+</body>
+</html>
