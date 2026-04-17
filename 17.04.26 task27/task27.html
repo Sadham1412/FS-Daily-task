@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Cards</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #323436;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: aliceblue;
+            background-color: black;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            overflow: hidden;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Movie List</h1>
+
+<div class="container" id="movieContainer"></div>
+
+<script>
+    const movies = [
+        {
+            name: "Leo",
+            image: "leo.jpg"
+        },
+        {
+            name: "Jailer",
+            image: "jailer.jpg"
+        },
+        {
+            name: "Vikram",
+            image: "vikram.jpg"
+        },
+        {
+            name: "Master",
+            image: "master.jpg"
+        }
+    ];
+
+    const container = document.getElementById("movieContainer");
+
+    movies.forEach(movie => {
+        let card = document.createElement("div");
+        card.classList.add("card");
+
+        let img = document.createElement("img");
+        img.src = movie.image;
+
+        let title = document.createElement("h3");
+        title.textContent = movie.name;
+
+        card.appendChild(img);
+        card.appendChild(title);
+
+        container.appendChild(card);
+    });
+</script>
+
+</body>
+</html>
