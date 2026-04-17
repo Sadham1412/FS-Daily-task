@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li>IFB</li>
+        <li>whirepool</li>
+        <li>samsung</li>
+        <li>IBM</li>
+    </ul>
+    <input type="text" id="input" oninput="filter()">
+    <!-- <button onclick="filter()">filter</button> -->
+    <script>
+        function findnum(a,b){
+for(let i=0;i<a.length;i++){
+    if(a[i]==b){
+        return true;
+    }
+    else{
+        return false;
+
+    }
+
+}
+        }
+        
+      function filter(){
+        let input=document.getElementById("input").value;
+        let ul=document.getElementById("ul1");
+        // let item=document.getElementsByTagName("li"); 
+        let item=ul.querySelectorAll("li");
+        item.forEach(element => {
+            const text=element.textContent;
+            if (findnum(text,input)){
+                element.style.display=""; // show another
+            }
+            else{
+                element.style.display="none";
+            }
+        });
+      }
+
+   
+        
+    </script>
+</body>
+</html>
