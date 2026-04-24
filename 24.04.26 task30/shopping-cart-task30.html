@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Shopping</title>
+
+<style>
+    body {
+        font-family: Arial;
+        margin: 0;
+        background: #f4f4f4;
+    }
+    #heading {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 15px;
+    }
+    .cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 20px;
+        margin: 20px;
+        font-weight: bold;
+    }
+
+    #carticon {
+        height: 25px;
+        width: 25px;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    li {
+        background: white;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        text-align: center;
+        width: 160px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+        margin: 10px 0;
+    }
+    button {
+        padding: 6px 12px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background: #333;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #5a7fa8;
+    }
+    .clear-btn {
+        display: block;
+        margin: 30px auto;
+        background: crimson;
+    }
+
+    footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 10px;
+        background: #222;
+        color: white;
+    }
+</style>
+</head>
+
+<body>
+<div id="heading">
+    <h1>Online Store</h1>
+</div>
+<div class="cart">
+    <img id="carticon" src="grocery-store.png" alt="">
+    Cart (<span id="cart-count">0</span>)
+</div>
+
+<ul>
+    <li>
+        <h3>Good Day</h3>
+        <img src="download.jpg" alt="">
+        <button onclick="addtocart()">Add to Cart</button>
+    </li>
+
+    <li>
+        <h3>Hide & Seek</h3>
+        <img src="hide and seek.jpg" alt="">
+        <button onclick="addtocart()">Add to Cart</button>
+    </li>
+
+    <li>
+        <h3>Parle-G</h3>
+        <img src="parle-g.jpg" alt="">
+        <button onclick="addtocart()">Add to Cart</button>
+    </li>
+</ul>
+
+<button class="clear-btn" onclick="clear1()">Clear All</button>
+
+
+<script>
+let cartcount = 0;
+
+function addtocart(){
+    cartcount++;
+    document.getElementById("cart-count").innerText = cartcount;
+}
+
+function clear1(){
+    cartcount = 0;
+    document.getElementById("cart-count").innerText = cartcount;
+}
+</script>
+<footer>
+    <p>© 2026 Online Store</p>
+</footer>
+</body>
+</html>
