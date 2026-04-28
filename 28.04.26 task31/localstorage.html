@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage</title>
+</head>
+<body>
+    <button onclick="setUserName()">submit</button>
+     <button onclick="removeUserName()">remove</button>
+    <script>
+        function setUserName(){
+            localStorage.setItem("username","sadham")
+            sessionStorage.setItem("username","venkat")
+        }
+           function removeUserName(){
+            localStorage.removeItem("username","sadham")
+            sessionStorage.removeItem("username","shanmugan")
+        }
+    </script>
+</body>
+</html>
